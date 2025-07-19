@@ -2,7 +2,8 @@
 
 A simple, elegant web app that displays random motivational quotes to inspire your day. Built using **HTML, CSS, and JavaScript**, this project includes features like quote copying and a like counter.
 
-🔗 **Live Demo:** [matrixCoderX.github.io/Project01](https://matrixCoderX.github.io/Project01)
+🔗 **Live Demo:** [matrixCoderX.github.io/Daily-Motivation-Quote-Generator
+](https://matrixcoderx.github.io/Daily-Motivation-Quote-Generator/)
 
 ---
 
