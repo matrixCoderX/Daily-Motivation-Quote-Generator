@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get daily inspiration with our Premium Quote Generator. Share, like, and copy quotes easily!" />
+  <meta name="keywords" content="quotes, motivation, inspiration, quote generator, daily quotes" />
+  <meta name="author" content="Your Name" />
+  <meta property="og:title" content="Premium Quote Generator" />
+  <meta property="og:description" content="Get daily inspiration with our Premium Quote Generator. Share, like, and copy quotes easily!" />
+  <meta property="og:type" content="website" />
   <title>Premium Quote Generator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,7 +19,15 @@
       <p id="quote">Click the button to see a quote!</p>
       <p id="author"></p>
     </div>
-    <button onclick="getQuote()">✨ New Quote</button>
+  <div class="buttons">
+  <button onclick="getQuote()">✨ New Quote</button>
+  <button onclick="copyQuote()">📋 Copy</button>
+  <button onclick="likeQuote()">❤️ Like</button>
+</div>
+<p id="like-count">Likes: 0</p>
+<p id="feedback"></p>
+
+    <div id="toast" class="toast">Quote copied!</div>
   </div>
   <script src="script.js"></script>
 </body>

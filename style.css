@@ -1,3 +1,4 @@
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
@@ -17,24 +18,26 @@ body {
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   max-width: 600px;
   width: 100%;
+  position: relative;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 25px;
   text-shadow: 1px 1px 4px #00000080;
 }
 
+/* Quote Box */
 .quote-box {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
   padding: 25px;
   color: #fff;
   margin-bottom: 20px;
@@ -42,7 +45,7 @@ h1 {
 }
 
 #quote {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
@@ -53,17 +56,73 @@ h1 {
   color: #ffe66d;
 }
 
+/* Buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
 button {
   background-color: #ffe66d;
   color: #333;
   border: none;
-  padding: 12px 30px;
+  padding: 10px 25px;
   font-size: 1rem;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  min-width: 100px;
 }
 
 button:hover {
   background-color: #fdd835;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Like Button Highlight */
+.liked {
+  background-color: #ff4d4d !important;
+  color: white !important;
+}
+
+/* Toast Message */
+.toast {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #444;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #quote {
+    font-size: 1.2rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
 }
