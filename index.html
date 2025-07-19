@@ -3,41 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Get your daily dose of motivation with inspiring quotes!" />
-  <meta name="keywords" content="motivational quotes, inspiring, success, daily quotes, life motivation" />
-  <meta name="author" content="matrixCoderX" />
-  
-  <!-- Google Site Verification -->
-  <meta name="google-site-verification" content="uC-6dBUSCDtabH78-p2PqSXlqYNXN13N4tdDJ0gI0E4" />
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Daily Motivation - Quote Generator" />
-  <meta property="og:description" content="Get daily inspiration with our Premium Quote Generator. Share, like, and copy quotes easily!" />
+  <meta property="og:title" content="Premium Quote Generator" />
   <meta property="og:type" content="website" />
+  <meta name="description" content="Get your daily dose of motivation with inspiring quotes!">
+<meta name="keywords" content="motivational quotes, inspiring, success, daily quotes, life motivation">
+<meta name="author" content="matrixCoderX">
 
-  <title>Daily Motivation - Quote Generator</title>
+<title>Daily Motivation - Quote Generator</title>
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Daily Motivation - Quote Generator</h1>
-    <p id="quote">Click the button to generate a quote</p>
-    <p id="author"></p>
-
-    <div class="btns">
-      <button onclick="generateQuote()">Generate Quote</button>
-      <button onclick="copyQuote()">Copy</button>
-      <button onclick="tweetQuote()">Tweet</button>
+    <h1>Quote Generator</h1>
+    <div class="quote-box">
+      <p id="quote">Click the button to see a quote!</p>
+      <p id="author"></p>
     </div>
+  <div class="buttons">
+  <button onclick="getQuote()">✨ New Quote</button>
+  <button onclick="copyQuote()">📋 Copy</button>
+  <button onclick="likeQuote()">❤️ Like</button>
+</div>
+<p id="like-count">Likes: 0</p>
+<p id="feedback"></p>
 
-    <footer>
-      <p>Developed by matrixCoderX | Stay motivated 💪</p>
-    </footer>
+    <div id="toast" class="toast">Quote copied!</div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
